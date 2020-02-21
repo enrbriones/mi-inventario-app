@@ -1,0 +1,29 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+}
+
+::ng-deep .header-tooltip{
+  font-size: 14px !important;
+  background: black;
+  opacity: 0.8;
+}
+
+small{
+  font-size: 60% !important;
+}

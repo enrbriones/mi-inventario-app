@@ -1,0 +1,70 @@
+// div{
+// }
+
+.tabla {
+  margin-top: 20px;
+  max-width: 1000px;
+  // margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+mat-paginator {
+  max-width: 1000px !important;
+}
+
+.make-gold {
+  background-color: #fff59d;
+}
+
+.make-red {
+  background-color: #ffcdd2;
+}
+
+.table-container {
+  position: relative;
+  min-height: 200px;
+}
+
+.example-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-rate-limit-reached {
+  color: #980000;
+  max-width: 360px;
+  text-align: center;
+}
+
+//   Progress Bar
+mat-progress-bar {
+  position: absolute;
+  top: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  height: 36px;
+}
+
+.indicaciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Fonts
+@font-face {
+  font-family: Robotox;
+  src: url(assets/fonts/Roboto-Thin.ttf) format("opentype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a{
+  text-decoration: none !important;
+}
+
+h1{
+  font-family:  Robotox, Roboto, Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif !important;
+    font-size: 30px;
+}
+

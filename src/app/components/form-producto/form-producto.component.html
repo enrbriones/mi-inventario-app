@@ -1,0 +1,77 @@
+<div @fadeInOut class="col-sm mt-4" style="max-width: 700px;" cdkTrapFocus>
+    <form #productoForm="ngForm" [formGroup]="formGroup">
+        <h1 class="mb-4">{{titulo}}</h1>
+
+        <div *ngIf="errores!=null">
+            <div class="alert alert-danger" role="alert">
+               <p *ngFor="let err of errores">{{err}}</p>
+            </div>
+        </div>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Nombre Producto</mat-label>
+            <input formControlName="nombre" matInput name="inputnombre" #inputnombre cdkFocusRegionStart />
+            <mat-error *ngIf="nombre.hasError('required')">
+                Requerido.
+            </mat-error>
+            <mat-error *ngIf="(nombre.errors?.minlength || nombre.errors?.maxlength) && !nombre.hasError('required')">
+                entre 4 y 40 caracteres.
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Tipo</mat-label>
+            <mat-select [compareWith]="compararTipo" name="tipo" formControlName="tipo">
+                <mat-option *ngFor="let tipo of tipos" [value]="tipo">{{tipo.nombre}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="tipo.hasError('required')">
+                Requerido.
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <span style="display: flex; justify-content: space-between;">
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha entrada</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaEntrada" name="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="fechaEntrada.hasError('required')">
+                    Requerido.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha caducidad</mat-label>
+                <input matInput [matDatepicker]="picker2" formControlName="fechaCaducidad" name="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+                <mat-error *ngIf="fechaCaducidad.hasError('required')">
+                    Requerido.
+                </mat-error>
+            </mat-form-field>
+        </span>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput formControlName="descripcion" name="descripcion" style="min-height: 100px;"></textarea>
+            <mat-error *ngIf="descripcion.errors?.maxlength">
+                Hasta 500 caracteres.
+            </mat-error>
+        </mat-form-field>
+
+        <span class="alineacion">
+            <button class="mt-3" mat-raised-button color="secondary" [routerLink]="['/productos/']">
+                <mat-icon>arrow_back</mat-icon>
+                Volver
+            </button>
+            <button type="button" *ngIf="!producto.id" class="mt-3 ml-2" mat-raised-button color="primary"
+                [disabled]="!formGroup.valid" (click)="create()">
+                Agregar Registro
+            </button>
+            <button type="button" *ngIf="producto.id" class="mt-3 ml-2" mat-raised-button color="primary"
+                [disabled]="!formGroup.valid" (click)="update()">
+                Actualizar Registro
+            </button>
+        </span>
+    </form>
+</div>

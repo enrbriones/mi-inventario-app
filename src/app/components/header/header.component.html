@@ -1,0 +1,16 @@
+<mat-toolbar class="header" color="primary">
+    <mat-toolbar-row>
+        <a class="logo" [routerLink]="['/clientes/']">Inventario App <small>DEMO</small></a>
+        <button mat-icon-button aria-label="Info">
+            <mat-icon matTooltip="Aplicación para llevar un mejor control de tus pertenencias personales."
+                matTooltipClass="header-tooltip" matTooltipPosition="right" color="danger">info_outline</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <mat-chip-list aria-label="http://www.github.com/enrbriones">
+            <a href="http://www.github.com/enrbriones" target="_blanck"><mat-chip color="accent">
+            <mat-icon aria-hidden="false" aria-label="Github">mood</mat-icon>
+            github.com/enrbriones
+            </mat-chip></a>
+        </mat-chip-list>
+    </mat-toolbar-row>
+</mat-toolbar>
