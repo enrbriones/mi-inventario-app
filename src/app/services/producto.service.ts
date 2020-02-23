@@ -6,13 +6,14 @@ import { Router } from '@angular/router';
 import { map, catchError, tap } from 'rxjs/operators';
 import { PageParams } from '../models/pageParams';
 import { Tipo } from '../models/tipo';
+import { URL_BACKEND } from '../custom_configs/config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
 
-  private url = 'http://localhost:8080/api/productos';
+  private url = URL_BACKEND + '/api/productos';
 
   constructor(
     private http: HttpClient

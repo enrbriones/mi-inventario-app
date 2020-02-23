@@ -28,7 +28,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   dataSource: Producto[] = [];
   productos: Producto[] = null;
   tipos: Tipo[] = null;
-  tipoId: number = null;
+  tipoId: number = 0;
   tipoNombre: string = null;
   public errores: any = null;
 
@@ -69,7 +69,7 @@ export class MainComponent implements OnInit, AfterViewInit {
             if (arrId.length > 0) {
               this.tipoId = arrId[0].id;
             }
-            if (this.tipoId == null) {
+            if (this.tipoId < 1) {
               this.router.navigate(['/productos']);
             }
             this.titulo = this.generarTitulo(this.tipoId);
@@ -147,7 +147,7 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   generarTitulo(tipoId: any) {
     const base = 'Mis Artículos';
-    if (tipoId != null) {
+    if (tipoId >0) {
       return `${base} - ${this.tipos[tipoId - 1].nombre}`;
     }
     return base;
