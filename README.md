@@ -1,6 +1,7 @@
-# InventarioAppFrontend
+# Mi Inventario App Frontend
 
-Demo Online: (https://mi-inventario-app.firebaseapp.com/productos)
+* Demo Online: (https://mi-inventario-app.firebaseapp.com/productos)
+* Backend Java Spring: (https://github.com/enrbriones/mi-inventatrio-app-backend)
 
 ## Objetivo del proyecto
 
@@ -10,7 +11,7 @@ Siempre he querido tener una aplicación para gestionar mis bienes personales, s
 
 ## About the project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20 and hosted with Firebase.
 
 ## Development server
 
