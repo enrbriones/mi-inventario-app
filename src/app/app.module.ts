@@ -9,8 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { MatToolbarModule, MatIconModule, MatSidenavModule, MatButtonModule,
-   MatSortModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSortModule } from '@angular/material/sort';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MainComponent } from './components/main/main.component';

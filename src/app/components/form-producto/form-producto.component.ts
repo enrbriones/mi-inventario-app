@@ -23,7 +23,7 @@ export class FormProductoComponent implements OnInit, AfterViewInit {
   tipos: Tipo[];
   public errores: any;
 
-  @ViewChild('inputnombre', { static: false }) inputNombre: ElementRef;
+  @ViewChild('inputnombre') inputNombre: ElementRef;
 
   formGroup: FormGroup = new FormGroup({
     nombre: new FormControl('', [
