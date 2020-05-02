@@ -1,7 +1,7 @@
 # Mi Inventario App Frontend
 
-* Demo Online: (https://mi-inventario-app.firebaseapp.com/productos)
-* Backend Java Spring: (https://github.com/enrbriones/mi-inventatrio-app-backend)
+# [Demo Online](https://mi-inventario-app.firebaseapp.com/productos)
+* [Backend Java Spring](https://github.com/enrbriones/mi-inventatrio-app-backend)
 
 ## Objetivo del proyecto
 
